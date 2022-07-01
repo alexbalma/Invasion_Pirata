@@ -30,12 +30,12 @@ setTimeout(() =>   {
    Matter.World.remove(world,this.body);
    delete boats[index];
  }, 2000);
-
+}
  animate() {
     this.speed += 0.05;
   }
  
-}
+
 
    display () {
     var angle = this.body.angle;
