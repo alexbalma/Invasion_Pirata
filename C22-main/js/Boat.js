@@ -31,6 +31,10 @@ setTimeout(() =>   {
    delete boats[index];
  }, 2000);
 
+ animate() {
+    this.speed += 0.05;
+  }
+ 
 }
 
    display () {
