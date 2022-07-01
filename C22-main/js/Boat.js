@@ -42,7 +42,7 @@ setTimeout(() =>   {
     translate(pos.x, pos.y);
     rotate(angle);
     imageMode(CENTER);
-    image(this.image,0,this.boatPosition, this.width, this.height);
+    image(this.animation[index],0,this.boatPosition, this.width, this.height);
     pop();
 
 
