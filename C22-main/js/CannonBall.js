@@ -58,7 +58,7 @@ this.speed += 0.05;
  display() {
     var pos = this.body.position;
     var angle = this.body.angle;
-    var index = floor(this.speed, this.animation.length);
+    var index = floor(this.speed % this.animation.length);
 
     push();
     translate(pos.x, pos.y);
@@ -68,7 +68,7 @@ this.speed += 0.05;
     pop();
 
       if (this.body.velocity.x > 0 && pos.x > 10 && !this.isSink) {
-        var position = [pos.x ,pos.y];
+        var position = [this.body.position.x, this.body.position.y];
         this.trajectory.push(position);
       }
 
@@ -79,5 +79,4 @@ this.speed += 0.05;
       }
   }
 }
-
 

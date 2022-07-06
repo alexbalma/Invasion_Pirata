@@ -1,4 +1,4 @@
- var body, width, height, boatPosition, animation, speed, isBroken;
+var body, width, height, boatPosition, animation, speed, isBroken;
 
 class Boat {
 
@@ -27,8 +27,8 @@ remove(index) {
   this.isBroken = true;
 
 setTimeout(() =>   {
-   Matter.World.remove(world,this.body);
-   delete boats[index];
+   Matter.World.remove(world, boats[index].body);
+   boats.splice(index, 1);
  }, 2000);
 }
  animate() {
@@ -47,6 +47,7 @@ setTimeout(() =>   {
     rotate(angle);
     imageMode(CENTER);
     image(this.animation[index],0,this.boatPosition, this.width, this.height);
+    noTint();
     pop();
 
 
